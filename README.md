@@ -1,2 +1,1 @@
-# My Portfolio Website
-Link: jgraven.com
+# jgraven.com
