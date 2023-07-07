@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener('DOMContentLoaded', () => {
     const introText = document.getElementById('intro-text');
-    const messages = ['Hi Mom :)'];
+    const messages = ['Jacob Graven'];
     let currentMessageIndex = 0;
     let currentCharacterIndex = 0;
     let isDeleting = false;
