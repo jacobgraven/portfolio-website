@@ -2,4 +2,4 @@
 
 [jgraven.com](jgraven.com)
 
-[^A] Icons downloaded from icons8.com
+[^A]: Icons downloaded from icons8.com
