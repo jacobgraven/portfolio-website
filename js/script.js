@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener('DOMContentLoaded', () => {
     const introText = document.getElementById('intro-text');
-    const messages = ['Jacob Graven'];
+    const messages = ['This site is currently under development... please come back later :)'];
     let currentMessageIndex = 0;
     let currentCharacterIndex = 0;
     let isDeleting = false;
@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (currentCharacterIndex === currentMessage.length) {
                 isDeleting = true;
-                setTimeout(typeWriter, 15000);
+                setTimeout(typeWriter, 10000);
                 return;
             }
         }
