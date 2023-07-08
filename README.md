@@ -1,1 +1,3 @@
-# Portfolio Website Repo | [jgraven.com](jgraven.com)
+# Portfolio Website Repo
+
+[jgraven.com](jgraven.com)
