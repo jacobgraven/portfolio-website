@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const element = document.getElementById('welcome-text-type');               // document element
 
     // const messages = ['Hi! My name is Jacob Graven!', 'Welcome to my web-folio :P', 'Feel free to look around, don\'t be shy!'];
-    const messages = ['Hi! Welcome to my web portfolio thingy'];
+    const messages = ['Get off my site you monk monk monkey-brained motherfucker!!!!!!!!', '......scram you buffoon!'];
     let msgIndex = 0;
     let charIndex = 0;
     function animateTyping(reversed) {
