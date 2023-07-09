@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const restartTime = 1000;  // time (ms)
     const permanentMessage = false; // animation will not loop (delete/retype) if this is true
     const element = document.getElementById('welcome-text-type'); // doc element
-    const messages = ['Get off my site you monk monk monkey-brained motherfucker!!!!!!!!', '......scram you buffoon!'];
+    const messages = ['Get off my site you worm-brained kook', '......scram you degenerate!'];
     let msgIndex = 0;
     let charIndex = 0;
     function animateTyping(reversed) {
