@@ -1,3 +1,13 @@
+:root {
+    --color-navbar: hsl(0, 0%, 100%);
+    --color-footer: hsl(0, 0%, 100%);
+    --color-bg: hsl(0, 0%, 100%);
+    --color-sectionA: white;
+    --color-sectionB: white;
+    
+
+}
+
 @font-face {
     font-family: 'Nunito';
     src: url('../assets/fonts/Nunito-Regular.ttf') format('truetype');
@@ -14,12 +24,12 @@ html, body {
 }
 
 header {
+    display: flex;
     width: 100%;
-    top: 0.2%;
+    top: 1vh;
     text-align: center;
     position: fixed;
     z-index: 999;
-    background-color: #252525cc;
     color: #f1f1f1;
 }
 
@@ -28,6 +38,9 @@ nav {
     justify-content: center;
     align-items: center;
     position: relative;
+
+    background-color: #111111aa;
+    margin: auto;
 }
 
 nav ul {
@@ -43,7 +56,7 @@ nav li {
 
 nav a {
     display: block;
-    color: #f1f1f1;
+    color: #f1f1f1; /* try: #FBFBFB */
     text-align: center;
     padding: 15px 15px;
     text-decoration: none;
@@ -51,8 +64,7 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #85c2ff;
-    /* # f4acb7  87797A*/
+    background-color: #85c2ff;     /* # f4acb7  87797A*/
 }
 
 /* active navbar link */
@@ -86,11 +98,18 @@ body {
     padding: 0;
     font-family: 'Nunito', 'Times New Roman', Georgia, sans-serif;
     background-color: #2424243b;
+    /* background: rgb(221,221,221);
+    background: radial-gradient(circle, rgba(221,221,221,1) 0%, rgba(141,177,221,1) 100%, rgba(148,187,233,1) 100%); */
 }
 
 main {
     margin: 0;
     padding: 0;
+    /* ! */
+    display: flex;
+    flex-direction: column;
+    gap: 10vh; 
+    justify-content: space-between;
 }
 
 section {
@@ -103,6 +122,8 @@ section {
     text-align: center;
     box-sizing: border-box;
     margin: auto;
+    /* ! */
+    /* border-radius: 0.5%; */
 }
 
 /* Sections: Welcome, Education, Contact */
@@ -143,6 +164,7 @@ footer {
 .footer-icon {
     width: 25px;
     height: 25px;
+    transition: transform 0.35s ease-in-out;
 }
 
 .footer-icon:hover {
@@ -150,15 +172,19 @@ footer {
     -webkit-transform: scale(1.5);
     -moz-transform: scale(1.5);
     -o-transform: scale(1.5);
-    transition: transform 0.35s ease-in-out;
+    -ms-transform: scale(1.5);
 }
 
 /*** Media Queries ***/
 
-/* TEMP (test) */
+/* test */
 @media (max-width: 768px) {
+    /* body {
+        background-color: pink;
+    } */
+
     nav {
-        display: block;
+        display: inline-block;
         text-align: center;
     }
 
