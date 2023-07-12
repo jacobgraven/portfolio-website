@@ -4,28 +4,27 @@
 <head>
   <title>Jacob Graven | Personal Portfolio</title>
   <meta charset="utf-8" />
-  <meta name="keywords" content="portfolio, graven, jacob graven"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="author" content="Jacob Graven"/>
-  <meta name="description" content="Online portfolio for Jacob Graven"/>
-  <link rel="icon"type="image/x-icon" href="assets/icons/favicon.ico"/>
-  <link rel="stylesheet" type="text/css" href="css/styles.css"/>
-  <link rel="stylesheet" type="text/css" href="css/carousel-styles.css"/>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="Jacob Graven" />
+  <!-- <meta name="description" content="Online portfolio for Jacob Graven" /> -->
+  <!-- <meta name="keywords" content="portfolio, graven, jacob graven" /> -->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/favicon-data/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-data/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-data/favicon-16x16.png">
+  <link rel="manifest" href="assets/icons/favicon-data/site.webmanifest">
+  <!-- <link rel="stylesheet" type="text/css" href="css/styles.css" /> -->
+  <link rel="stylesheet" type="text/css" href="css/main-styles.css" />
+  <link rel="stylesheet" type="text/css" href="css/carousel-styles.css" />
+  <link rel="stylesheet" type="text/css" href="css/contact.css" />
   <script src="js/carousel.js"></script>
   <script src="js/animations.js"></script>
-
-  <style>
-
-  </style>
-
 </head>
 
 <body>
   <header>
     <nav>
       <ul>
-        <li><a href="#welcome">Home</a></li>
+        <li><a href="#welcome">Welcome</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#education">Education</a></li>
         <li><a href="#projects">Projects</a></li>
@@ -52,25 +51,28 @@
     </section>
 
     <section id="projects">
-      <!-- TODO (template below)-->
       <h2>Projects</h2>
+
       <div class="carousel-container">
         <div class="carousel-nav">
           <div class="arrow prev">&#8249;</div>
           <div class="arrow next">&#8250;</div>
         </div>
+
         <div class="carousel-slide active">
           <div class="content-box">
             <h2>Project Placeholder (1)</h2>
             <p>. . . . .</p>
           </div>
         </div>
+
         <div class="carousel-slide">
           <div class="content-box">
             <h2>Project Placeholder (2)</h2>
             <p>. . . . .</p>
           </div>
         </div>
+
         <div class="carousel-slide">
           <div class="content-box">
             <h2>Project Placeholder (3)</h2>
@@ -79,29 +81,48 @@
         </div>
       </div>
     </section>
-    
-    <section id="contact">
-      <h2>Contact</h2>
-      <!-- TODO -->
+
+    <section id="contact" class="contact-section">
+      <h2>Contact Me</h2>
+      <form id="contact-form">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
     </section>
   </main>
+  
   <footer>
     <!-- Icons downloaded from icons8.com -->
     <div id="github-link">
       <a href="https://github.com/jacobgraven" target="_blank">
-        <img class="footer-icon" src="assets/icons/icon-github.ico" alt="GitHub"/>
+        <img class="footer-icon" src="assets/icons/icon-github.ico" alt="GitHub" />
       </a>
     </div>
 
     <div id="email-link">
       <a href="mailto:me@jgraven.com">
-        <img class="footer-icon" src="assets/icons/icon-email.ico" alt="Email"/>
+        <img class="footer-icon" src="assets/icons/icon-email.ico" alt="Email" />
       </a>
     </div>
 
     <div id="cat-link">
       <a href="https://www.youtube.com/watch?v=7nnmvuC4NLc" target="_blank">
-        <img class="footer-icon" src="assets/icons/icon-cat.ico" alt="Cats"/>
+        <img class="footer-icon" src="assets/icons/icon-cat.ico" alt="Cats" />
       </a>
     </div>
   </footer>
