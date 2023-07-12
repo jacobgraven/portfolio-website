@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
-  const carouselContainer = document.querySelector(".carousel-container");
-  const contentBoxes = Array.from(document.querySelectorAll(".content-box"));
+  // const carouselContainer = document.querySelector(".carousel-container");
+  // const contentBoxes = Array.from(document.querySelectorAll(".content-box"));
   const carouselSlides = Array.from(document.querySelectorAll(".carousel-slide"));
   const prevArrow = document.querySelector(".arrow.prev");
   const nextArrow = document.querySelector(".arrow.next");
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   function startSlideInterval() {
-    slideInterval = setInterval(showNextSlide, 5000); // Auto-scroll
+    slideInterval = setInterval(showNextSlide, 7500); // Auto-scroll
   }
 
   nextArrow.addEventListener("click", showNextSlide);
@@ -58,4 +58,3 @@ document.addEventListener("DOMContentLoaded", function() {
   //   contentBox.addEventListener("mouseleave", handleContentBoxLeave);
   // });
 });
-
