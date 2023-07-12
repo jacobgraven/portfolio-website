@@ -1,12 +1,12 @@
-// Typing Text Animation //
+// Typing text //
 document.addEventListener('DOMContentLoaded', () => {
-    const typeTime = 65;       // time (ms) delay between each character (includes deleting)
+    const typeTime = 65;        // time (ms) delay between each character (includes deleting)
     const delTime = 35;
     const displayTime = 10000;  // time (ms) that completed message stays on screen
-    const restartTime = 1000;  // time (ms)
+    const restartTime = 1000;   // time (ms)
     const permanentMessage = false; // animation will not loop (delete/retype) if this is true
     const element = document.getElementById('welcome-text-type'); // doc element
-    const messages = ['Get off my site you worm-brained kook', '......scram you degenerate!'];
+    const messages = ['Hello! This is placeholder text (1)', '...example (2)'];
     let msgIndex = 0;
     let charIndex = 0;
     function animateTyping(reversed) {
@@ -48,10 +48,10 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// Fading text animation
+// Fade-in text
 document.addEventListener('DOMContentLoaded', () => {
     const element = document.getElementById('welcome-text-fade');
-    function animateFade(disabled=false) {
+    function animateFade(disabled = false) {
         if (!disabled) {
             element.classList.add('fade-in');
         }
@@ -63,6 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 4700);
 });
 
+// Navbar scroll
 document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelectorAll('nav a');
 
