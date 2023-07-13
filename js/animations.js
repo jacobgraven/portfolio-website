@@ -4,9 +4,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const delTime = 35;
     const displayTime = 10000;  // time (ms) that completed message stays on screen
     const restartTime = 1000;   // time (ms)
-    const permanentMessage = false; // animation will not loop (delete/retype) if this is true
+    const permanentMessage = true; // animation will not loop (delete/retype) if this is true
     const element = document.getElementById('welcome-text-type'); // doc element
-    const messages = ['Hello! This is placeholder text (1)', '...example (2)'];
+    const messages = ['Hello! This is placeholder text xO', '...example (2)'];
     let msgIndex = 0;
     let charIndex = 0;
     function animateTyping(reversed) {
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const targetSection = document.querySelector(targetSectionId);
 
             window.scrollTo({
-                top: targetSection.offsetTop,
+                top: targetSection.offsetTop - 7.5 * window.innerHeight/100,
                 behavior: 'smooth'
             });
         });
@@ -105,7 +105,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const targetSectionId = navLink.getAttribute('href');
             const targetSection = document.querySelector(targetSectionId);
 
-            if (targetSection.offsetTop <= currentScrollPos && targetSection.offsetTop + targetSection.offsetHeight > currentScrollPos) {
+
+            // todo
+            if (targetSection.offsetTop - 7.5 * window.innerHeight/100 <= currentScrollPos && targetSection.offsetTop + targetSection.offsetHeight - 7.5 * window.innerHeight/100 > currentScrollPos) {
                 navLink.classList.add('active');
             }
         });
