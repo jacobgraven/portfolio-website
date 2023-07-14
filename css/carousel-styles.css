@@ -46,6 +46,7 @@
 
 .carousel-nav {
     position: absolute;
+    /* height: 100%; */
     top: 50%;
     transform: translateY(-50%);
     display: flex;

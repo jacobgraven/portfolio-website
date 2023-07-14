@@ -1,132 +1,155 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>Jacob Graven | Personal Portfolio</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/favicon-data/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-data/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-data/favicon-16x16.png" />
+    <link rel="manifest" href="assets/icons/favicon-data/site.webmanifest" />
+    <link rel="stylesheet" type="text/css" href="css/main-styles.css" />
+    <link rel="stylesheet" type="text/css" href="css/carousel-styles.css" />
+    <link rel="stylesheet" type="text/css" href="css/contact-styles.css" />
+    <script src="js/carousel.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav id="scroll-nav">
+        <!-- <a class="navbar-link" href="#welcome">Welcome</a> -->
+        <a class="navbar-link" href="#experience">Experience</a>
+        <a class="navbar-link" href="#education">Education</a>
+        <a class="navbar-link" href="#projects">Projects</a>
+        <a class="navbar-link" href="#contact">Contact</a>
+      </nav>
 
-<head>
-  <title>Jacob Graven | Personal Portfolio</title>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="author" content="Jacob Graven" />
-  <!--  -->
-  <!-- <meta name="description" content="Online portfolio for Jacob Graven" /> -->
-  <!-- <meta name="keywords" content="portfolio, graven, jacob graven" /> -->
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/favicon-data/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-data/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-data/favicon-16x16.png">
-  <link rel="manifest" href="assets/icons/favicon-data/site.webmanifest">
-  <link rel="stylesheet" type="text/css" href="css/main-styles.css" />
-  <link rel="stylesheet" type="text/css" href="css/carousel-styles.css" />
-  <link rel="stylesheet" type="text/css" href="css/contact-styles.css" />
-  <script src="js/carousel.js"></script>
-  <script src="js/animations.js"></script>
-</head>
-
-<body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="#welcome">Welcome</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main>
-    <section id="welcome">
-      <h1>Placeholder</h1>
-      <h1 id="welcome-text-type">Welcome! Enable JS for a better experience.</h1>
-      <h3 id="welcome-text-fade"></h3>
-      <!-- TODO -->
-    </section>
-
-    <section id="experience">
-      <h2>Experience and Skills</h2>
-      <!-- TODO -->
-    </section>
-
-    <section id="education">
-      <h2>Education</h2>
-      <!-- TODO -->
-    </section>
-
-    <section id="projects">
-      <h2>Projects</h2>
-
-      <div class="carousel-container">
-        <div class="carousel-nav">
-          <div class="arrow prev">&#8249;</div>
-          <div class="arrow next">&#8250;</div>
+      <div id="link-nav">
+        <div id="github-link">
+          <a href="https://github.com/jacobgraven" target="_blank">
+            <img class="link-icon" src="../assets/icons/icon-github.svg" alt="GitHub" />
+          </a>
         </div>
 
-        <div class="carousel-slide active">
-          <div class="content-box">
-            <h2>Project Placeholder (1)</h2>
-            <p>. . . . .</p>
-          </div>
+        <div id="email-link">
+          <a href="mailto:me@jgraven.com">
+            <img class="link-icon" src="../assets/icons/icon-email.svg" alt="Email" />
+          </a>
         </div>
 
-        <div class="carousel-slide">
-          <div class="content-box">
-            <h2>Project Placeholder (2)</h2>
-            <p>. . . . .</p>
-          </div>
+        <div id="linkedin-link">
+          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+            <img class="link-icon" src="../assets/icons/icon-linkedin.svg" alt="Cats" />
+          </a>
         </div>
 
-        <div class="carousel-slide">
-          <div class="content-box">
-            <h2>Project Placeholder (3)</h2>
-            <p>. . . . .</p>
-          </div>
+        <div id="cat-link">
+          <a href="https://www.youtube.com/watch?v=7nnmvuC4NLc" target="_blank">
+            <img class="link-icon" src="../assets/icons/icon-cat.svg" alt="Cats" />
+          </a>
         </div>
       </div>
-    </section>
+    </header>
+    <main>
+      <section id="welcome">
+        <!-- <div class="header-image"> -->
+        <!-- <img class="welcome-img scale-in" src="../assets/images/welcome-image.png" alt="Welcome Image" /> -->
+        <img class="welcome-img" src="../assets/images/image-landing.png" alt="Welcome Kitty Image" />
+        <h1 class="welcome-header scale-in" style="font-size: 42px;">Jacob Graven</h1>
+        <!-- </div> -->
+        <p class="welcome-text slide-in" style="font-size: 28px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+      </section>
 
-    <section id="contact" class="contact-section">
-      <h2>Contact Form Placeholder</h2>
-      <form id="contact-form">
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" required>
-        </div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required>
-        </div>
-        <div class="form-group">
-          <label for="subject">Subject</label>
-          <input type="text" id="subject" name="subject" required>
-        </div>
-        <div class="form-group">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
-        </div>
-        <button type="submit">Submit</button>
-      </form>
-    </section>
-  </main>
+      <section id="experience">
+        <h2>Experience and Skills (Placeholder)</h2>
+      </section>
 
-  <footer>
-    <!-- Icons downloaded from icons8.com -->
-    <div id="github-link">
-      <a href="https://github.com/jacobgraven" target="_blank">
-        <img class="footer-icon" src="assets/icons/icon-github.ico" alt="GitHub" />
-      </a>
-    </div>
+      <section id="education">
+        <h2>Education (Placeholder)</h2>
+      </section>
 
-    <div id="email-link">
-      <a href="mailto:me@jgraven.com">
-        <img class="footer-icon" src="assets/icons/icon-email.ico" alt="Email" />
-      </a>
-    </div>
+      <section id="projects">
+        <h2>Projects (Placeholder)</h2>
 
-    <div id="cat-link">
-      <a href="https://www.youtube.com/watch?v=7nnmvuC4NLc" target="_blank">
-        <img class="footer-icon" src="assets/icons/icon-cat.ico" alt="Cats" />
-      </a>
-    </div>
-  </footer>
-</body>
+        <!-- <div class="carousel-container">
+          <div class="carousel-nav">
+            <div class="arrow prev">&#8249;</div>
+            <div class="arrow next">&#8250;</div>
+          </div>
 
+          <div class="carousel-slide active">
+            <div class="content-box">
+              <h2>Project Placeholder (1)</h2>
+              <p>. . . . .</p>
+            </div>
+          </div>
+
+          <div class="carousel-slide">
+            <div class="content-box">
+              <h2>Project Placeholder (2)</h2>
+              <p>. . . . .</p>
+            </div>
+          </div>
+
+          <div class="carousel-slide">
+            <div class="content-box">
+              <h2>Project Placeholder (3)</h2>
+              <p>. . . . .</p>
+            </div>
+          </div>
+        </div> -->
+      </section>
+
+      <section id="contact" class="contact-section">
+        <h2>Contact Form (Placeholder)</h2>
+        <!-- <form id="contact-form">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit">Submit</button>
+        </form> -->
+      </section>
+    </main>
+    <footer>
+      <!-- Icons downloaded from iconify.design -->
+      <div id="github-link">
+        <a href="https://github.com/jacobgraven" target="_blank">
+          <img class="link-icon" src="../assets/icons/icon-github.svg" alt="GitHub" />
+        </a>
+      </div>
+
+      <div id="email-link">
+        <a href="mailto:me@jgraven.com">
+          <img class="link-icon" src="../assets/icons/icon-email.svg" alt="Email" />
+        </a>
+      </div>
+
+      <div id="linkedin-link">
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+          <img class="link-icon" src="../assets/icons/icon-linkedin.svg" alt="Cats" />
+        </a>
+      </div>
+
+      <div id="cat-link">
+        <a href="https://www.youtube.com/watch?v=7nnmvuC4NLc" target="_blank">
+          <img class="link-icon" src="../assets/icons/icon-cat.svg" alt="Cats" />
+        </a>
+      </div>
+    </footer>
+  </body>
 </html>
