@@ -11,8 +11,9 @@
     <link rel="stylesheet" type="text/css" href="css/main-styles.css" />
     <link rel="stylesheet" type="text/css" href="css/carousel-styles.css" />
     <link rel="stylesheet" type="text/css" href="css/contact-styles.css" />
-    <script src="js/carousel.js"></script>
+    <!-- <script src="js/carousel.js"></script> -->
     <script src="js/animations.js"></script>
+
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
   </head>
   <body>
@@ -26,40 +27,37 @@
       </nav>
 
       <div id="link-nav">
-        <div id="github-link">
+        <div class="github-link">
           <a href="https://github.com/jacobgraven" target="_blank">
             <img class="link-icon" src="assets/icons/icon-github.svg" alt="GitHub" />
           </a>
         </div>
 
-        <div id="email-link">
+        <div class="email-link">
           <a href="mailto:me@jgraven.com">
             <img class="link-icon" src="assets/icons/icon-email.svg" alt="Email" />
           </a>
         </div>
 
-        <div id="linkedin-link">
+        <div class="linkedin-link">
           <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
             <img class="link-icon" src="assets/icons/icon-linkedin.svg" alt="Cats" />
           </a>
         </div>
 
-        <div id="cat-link">
+        <div class="cat-link">
           <a href="https://www.youtube.com/watch?v=7nnmvuC4NLc" target="_blank">
             <img class="link-icon" src="assets/icons/icon-cat.svg" alt="Cats" />
           </a>
         </div>
       </div>
     </header>
+
     <main>
       <section id="welcome">
-        <!-- <div class="header-image"> </div> -->
-        <!-- <img class="welcome-img scale-in" src="../assets/images/welcome-image.png" alt="Welcome Image" /> -->
-        <img class="welcome-img" src="assets/images/image-landing.png" alt="Welcome Kitty Image" />
-        <h1 class="welcome-header scale-in" style="font-size: 42px;">Jacob Graven</h1>
-        <!-- </div> -->
-        <p class="welcome-text slide-in" style="font-size: 28px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+        <img id="landing-img" class="welcome-img slide-in-blurred-top" src="assets/images/image-landing.png" alt="Welcome Kitty Image!" />
+        <h1 id="landing-header" class="welcome-header slide-in-bottom scale-in" style="font-size: 42px;">Jacob Graven</h1>
+        <p id="landing-text" class="welcome-text slide-in">ultricies mi quis hendrerit dolor magna eget est lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas integer eget aliquet nibh praesent tristique magna sit amet purus gravida quis blandit turpis cursus in hac habitasse platea dictumst quisque</p>
       </section>
 
       <section id="experience">
@@ -125,27 +123,28 @@
         </form> -->
       </section>
     </main>
+
     <footer>
       <!-- Icons downloaded from iconify.design -->
-      <div id="github-link">
+      <div class="github-link">
         <a href="https://github.com/jacobgraven" target="_blank">
           <img class="link-icon" src="assets/icons/icon-github.svg" alt="GitHub" />
         </a>
       </div>
 
-      <div id="email-link">
+      <div class="email-link">
         <a href="mailto:me@jgraven.com">
           <img class="link-icon" src="assets/icons/icon-email.svg" alt="Email" />
         </a>
       </div>
 
-      <div id="linkedin-link">
+      <div class="linkedin-link">
         <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
           <img class="link-icon" src="assets/icons/icon-linkedin.svg" alt="Cats" />
         </a>
       </div>
 
-      <div id="cat-link">
+      <div class="cat-link">
         <a href="https://www.youtube.com/watch?v=7nnmvuC4NLc" target="_blank">
           <img class="link-icon" src="assets/icons/icon-cat.svg" alt="Cats" />
         </a>
