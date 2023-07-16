@@ -3,7 +3,7 @@
     --color-black: #101010;
     --color-gray: #3e3e3e;
     --color-lightgray: #3e3e3e55;
-    --color-pink: #ff059f;
+    --color-pink: #ff059f; /* #F50097 */
 }
 
 @font-face {
@@ -228,7 +228,7 @@ footer {
 .link-icon {
     height: 200%;
     width: 200%;
-    --animation-time: 0.35s;
+    --animation-time: 0.50s;
     --movement-curve: cubic-bezier(0.680, -0.550, 0.265, 1.550);
     --movement-curve2: ease-in-out;
     transition: transform var(--animation-time) var(--movement-curve), filter var(--animation-time) var(--movement-curve2);
@@ -383,9 +383,9 @@ footer {
         vertical-align: middle;
     }
     
-    .navbar-link {
-        transition: box-shadow 0.35s cubic-bezier(0.680, -0.550, 0.265, 1.550), transform 0.35s cubic-bezier(0.250, 0.460, 0.450, 0.940);
-    }
+    /* .navbar-link {
+        transition: box-shadow 0.75s cubic-bezier(0.680, -0.550, 0.265, 1.550), transform 0.75s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+    } */
     
     .navbar-link:hover, .navbar-link:active {
         transform: translateX(-6px) translateY(6px);
@@ -481,10 +481,10 @@ footer {
         vertical-align: middle;
     }
 
-    .link-icon {
-        /* width: 75%; */
-        /* height: 75%; */
-    }
+    /* .link-icon {
+        width: 75%;
+        height: 75%;
+    } */
     
     .navbar-link {
         transition: box-shadow 0.35s cubic-bezier(0.680, -0.550, 0.265, 1.550), transform 0.35s cubic-bezier(0.250, 0.460, 0.450, 0.940);
