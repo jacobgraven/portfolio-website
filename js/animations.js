@@ -4,7 +4,6 @@ window.onbeforeunload = function () {
     document.getElementById('landing-header').remove();
     document.getElementById('landing-text').remove();
 
-    // TODO: remove landing elements, add landing elements (opaque)
     window.scrollTo(0, 0);
 }
 
