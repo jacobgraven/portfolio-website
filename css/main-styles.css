@@ -2,9 +2,17 @@
     --color-white: #fefefe;
     --color-black: #101010;
     --color-gray: #3e3e3e;
-    --color-lightgray: #3e3e3e55;
-    --color-navgray: #6a6a6a;
+    --color-transparentgray: #3e3e3e55;
+    --color-lightgray: #6a6a6a;
     --color-pink: #fc45b9;
+
+    /* Possible palette/theme */
+    --color-rose: #fc45b9;
+    --color-fucshia: #ff00ff;
+    --color-dimgray: #6a6a6a;
+    --color-seasalt: #fafafa;
+    --color-licorice: #1A090D;
+    --color-smokey: #070600;
 }
 
 ::-webkit-scrollbar {
@@ -39,46 +47,30 @@
     }
 }
 
-@-webkit-keyframes slide-in-blurred-top {
+@-webkit-keyframes slide-in-top {
     0% {
         opacity: 0;
-        -webkit-transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
-        transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
-        -webkit-transform-origin: 50% 0%;
-        transform-origin: 50% 0%;
-        -webkit-filter: blur(40px);
-        filter: blur(40px);
+        -webkit-transform: translateY(-1000px);
+        transform: translateY(-1000px);
     }
 
     100% {
-        -webkit-transform: translateY(0) scaleY(1) scaleX(1);
-        transform: translateY(0) scaleY(1) scaleX(1);
-        -webkit-transform-origin: 50% 50%;
-        transform-origin: 50% 50%;
-        -webkit-filter: blur(0);
-        filter: blur(0);
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
         opacity: 1;
     }
 }
 
-@keyframes slide-in-blurred-top {
+@keyframes slide-in-top {
     0% {
         opacity: 0;
-        -webkit-transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
-        transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
-        -webkit-transform-origin: 50% 0%;
-        transform-origin: 50% 0%;
-        -webkit-filter: blur(40px);
-        filter: blur(40px);
+        -webkit-transform: translateY(-1000px);
+        transform: translateY(-1000px);
     }
 
     100% {
-        -webkit-transform: translateY(0) scaleY(1) scaleX(1);
-        transform: translateY(0) scaleY(1) scaleX(1);
-        -webkit-transform-origin: 50% 50%;
-        transform-origin: 50% 50%;
-        -webkit-filter: blur(0);
-        filter: blur(0);
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
         opacity: 1;
     }
 }
@@ -125,7 +117,7 @@ h1, h2 {
 
 p {
     font-family: 'Nunito', 'Times New Roman', Georgia, sans-serif;
-    font-size: 22px;
+    font-size: 1.375rem;
     text-align: center;
     color: var(--color-gray);
 }
@@ -137,13 +129,12 @@ header {
     position: relative;
     top: 0;
     left: 0;
-    margin-top: 3vh;
+    margin-top: 0vh;
     margin-bottom: 0vh;
     width: 100vw;
+    height: 10vh;
+    /* height: 50px; */
     background-color: transparent;
-    /* background-color: var(--color-white); */
-    /* padding-left: 4rem;
-    padding-right: 4rem; */
 }
 
 #scroll-nav {
@@ -153,13 +144,10 @@ header {
     width: 50vw;
     /* gap: 5vw; */
     gap: 4rem;
-    /* font-size: 22px; */
-    /* font-size: 1.25vw; */
-    font-size: 1.5em;
+    font-size: 1.5rem;
     font-weight: bolder;
     background-color: transparent;
     margin-left: 5rem;
-    /* margin-right: 5%; */
 }
 
 #scroll-nav a {
@@ -181,8 +169,9 @@ header {
     gap: 7rem;
     background-color: transparent;
     margin-right: 5rem;
-    /* margin-right: 5rem; */
 }
+
+/* #link-nav:-webkit-any(a, img) {} */
 
 #link-nav a {
     width: 50px;
@@ -190,8 +179,6 @@ header {
 }
 
 #link-nav img {
-    /* display: block; */
-    /* vertical-align: middle; */
     height: 100%;
     width: 100%;
 }
@@ -199,8 +186,8 @@ header {
 main {
     display: flex;
     flex-direction: column;
-    gap: 15vh;
     margin-top: 10vh;
+    gap: 15vh;
 }
 
 section {
@@ -210,9 +197,16 @@ section {
     justify-content: center;
     text-align: center;
     background-color: transparent;
-    width: 100vw;
-    height: 100vh;
+    /* width: 100vw; */
+    width: 90vw;
+    max-height: 100vh;
+    min-height: 50vh;
+    /* @ contact.css */
+    /* border-left: 1px solid #3d3b3055;
+    border-right: 1px solid #3d3b3055; */
 }
+
+
 
 #welcome h1, #welcome p {
     padding-left: 100px;
@@ -228,9 +222,11 @@ section {
 #welcome {
     display: flex;
     flex-direction: column;
-    justify-content:flex-start;
+    justify-content: flex-start;
     align-items: center;
     text-align: center;
+    height: 80vh;
+    width: 100vw;
     /* margin-top: 0vh; */
     /* height: 80vh; */
     /* margin: auto; */
@@ -246,14 +242,10 @@ footer {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    /* gap: 2.5vw; */
     gap: 5vw;
-    margin-top: 5vh;
-    background-color: var(--color-lightgray);
+    background-color: var(--color-transparentgray);
     color: var(--color-white);
-    /* padding: 20px; */
-    /* padding: 0.5%; */
-    /* text-align: left; */
+    padding: 20px 0;
 }
 
 footer a {
@@ -262,7 +254,6 @@ footer a {
     vertical-align: center;
     width: 40px;
     height: 40px;
-    padding: 20px 0;
 }
 
 .navbar-link {
@@ -271,12 +262,9 @@ footer a {
 
 .navbar-link:hover, .navbar-link:active {
     transform: translateX(-8px) translateY(8px);
-    /* box-shadow: 1px -1px var(--color-pink), 2px -2px var(--color-pink), 3px -3px var(--color-pink), 4px -4px var(--color-pink),
-                5px -5px var(--color-pink), 6px -6px var(--color-pink), 7px -7px var(--color-gray), 8px -8px var(--color-gray),
-                9px -9px var(--color-gray), 10px -10px var(--color-gray), 11px -11px var(--color-gray), 12px -12px var(--color-gray); */
     box-shadow: 1px -1px var(--color-pink), 2px -2px var(--color-pink), 3px -3px var(--color-pink), 4px -4px var(--color-pink),
-        5px -5px var(--color-pink), 6px -6px var(--color-pink), 7px -7px var(--color-navgray), 8px -8px var(--color-navgray),
-        9px -9px var(--color-navgray), 10px -10px var(--color-navgray), 11px -11px var(--color-navgray), 12px -12px var(--color-navgray);
+        5px -5px var(--color-pink), 6px -6px var(--color-pink), 7px -7px var(--color-lightgray), 8px -8px var(--color-lightgray),
+        9px -9px var(--color-lightgray), 10px -10px var(--color-lightgray), 11px -11px var(--color-lightgray), 12px -12px var(--color-lightgray);
 }
 
 .navbar-link:not(:hover) {
@@ -293,8 +281,10 @@ footer a {
 #landing-img {
     width: 400px;
     height: 400px;
-    -webkit-animation: slide-in-blurred-top 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 350ms both;
-    animation: slide-in-blurred-top 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 350ms both;
+    /* -webkit-animation: slide-in-blurred-top 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 350ms both;
+    animation: slide-in-blurred-top 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 350ms both; */
+    -webkit-animation: slide-in-top 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 350ms both;
+    animation: slide-in-top 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 350ms both;
 }
 
 #landing-text {
@@ -310,6 +300,7 @@ footer a {
     transition: transform var(--animation-time) var(--movement-curve), filter var(--animation-time) var(--movement-curve2);
 }
 
+
 footer .link-icon {
     height: 100%;
     width: 100%;
@@ -324,10 +315,18 @@ footer .link-icon {
     filter: invert(46%) sepia(91%) saturate(3271%) hue-rotate(297deg) brightness(101%) contrast(98%);
 }
 
-/* Desktop */
-/* @media screen and (min-width: 1024px) {} */
 
-/* Tablet (Regular / Portrait) */
+/* L/XL Screens and Devices */
+@media screen and (min-width: 3840px) {}
+
+@media screen and (min-width: 2560px) and (max-width: 3839px) {}
+
+@media screen and (min-width: 1920px) and (max-width: 2559px) {}
+
+@media screen and (min-width: 1024px)and (max-width: 1919px) {}
+
+
+/*  Tablet (Portrait) */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     #landing-img {
         width: 300px;
@@ -411,8 +410,8 @@ footer .link-icon {
 
     .navbar-link:hover, .navbar-link:active {
         transform: translateX(-6px) translateY(6px);
-        box-shadow: 1px -1px var(--color-pink), 2px -2px var(--color-pink), 3px -3px var(--color-pink), 4px -4px var(--color-navgray),
-            5px -5px var(--color-navgray), 6px -6px var(--color-navgray);
+        box-shadow: 1px -1px var(--color-pink), 2px -2px var(--color-pink), 3px -3px var(--color-pink), 4px -4px var(--color-lightgray),
+            5px -5px var(--color-lightgray), 6px -6px var(--color-lightgray);
     }
 
     footer {
@@ -502,19 +501,18 @@ footer .link-icon {
 
     .navbar-link:hover, .navbar-link:active {
         transform: translateX(-6px) translateY(6px);
-        box-shadow: 1px -1px var(--color-pink), 2px -2px var(--color-pink), 3px -3px var(--color-pink), 4px -4px var(--color-navgray),
-            5px -5px var(--color-navgray), 6px -6px var(--color-navgray);
+        box-shadow: 1px -1px var(--color-pink), 2px -2px var(--color-pink), 3px -3px var(--color-pink), 4px -4px var(--color-lightgray),
+            5px -5px var(--color-lightgray), 6px -6px var(--color-lightgray);
     }
 }
+
+
+/* TODO: stuff below */
 
 /* Tablet Landscape */
 @media screen and (min-width: 768px) and (max-width: 1023px) and (orientation: landscape) {}
 
-/*******************
- *                 *
- * Mobile Portrait *
- *                 *
- *******************/
+/* Small Devices (Mobile Phones) */
 @media screen and (max-width: 480px) {
     #welcome #landing-img {
         width: 150px;
@@ -526,7 +524,7 @@ footer .link-icon {
         font-size: 0.75rem;
         padding-left: 15px;
         padding-right: 15px;
-        /* padding: 0 20px; */
+        /* padding: 0 15px; */
     }
 
     #welcome h1 {
@@ -568,8 +566,6 @@ footer .link-icon {
         width: 50%;
         gap: 0.75rem;
         margin-right: 1rem;
-        /* margin-right: 0; */
-        /* padding-right: 3.5%; */
     }
 
     #link-nav a {
@@ -625,21 +621,3 @@ footer .link-icon {
         font-size: 1rem;
     }
 }
-
-/* Mobile Landscape*/
-/* @media screen and (max-width: 640px) and (orientation: landscape) {} */
-
-/* Extra small devices (phones, 600px and down) */
-/* @media only screen and (max-width: 600px) {} */
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-/* @media only screen and (min-width: 600px) {} */
-
-/* Medium devices (landscape tablets, 768px and up) */
-/* @media only screen and (min-width: 768px) {} */
-
-/* Large devices (laptops/desktops, 992px and up) */
-/* @media only screen and (min-width: 992px) {} */
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-/* @media only screen and (min-width: 1200px) {} */

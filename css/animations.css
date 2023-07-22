@@ -1,30 +1,30 @@
-/* .scale-in {
-    -webkit-animation: slide-in-bottom 1.25s cubic-bezier(0.250, 0.460, 0.450, 0.940) 600ms both;
-    animation: slide-in-bottom 1.25s cubic-bezier(0.250, 0.460, 0.450, 0.940) 600ms both;
-}
-
-.slide-in-bottom {
-    -webkit-animation: slide-in-bottom 1.25s cubic-bezier(0.250, 0.460, 0.450, 0.940) 600ms both;
-    animation: slide-in-bottom 1.25s cubic-bezier(0.250, 0.460, 0.450, 0.940) 600ms both;
-} */
+/* NOTE: CURRENTLY NOT LINKED IN index.html */
+/* SEE main-styles.css */
 
 #landing-img {
-    width: 300px;
-    height: 300px;
+    /* width: 300px;
+    height: 300px; */
     -webkit-animation: slide-in-blurred-top 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 350ms both;
     animation: slide-in-blurred-top 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 350ms both;
 }
 
 #landing-text {
-    font-size: 28px;
+    /* font-size: 28px; */
     -webkit-animation: slide-in-bottom 1.1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 750ms both;
     animation: slide-in-bottom 1.1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 750ms both;
+}
+
+#landing-header {
+    /* font-size: ?px */
+    -webkit-animation: slide-in-bottom 1.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) 750ms both;
+    animation: slide-in-bottom 1.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) 750ms both;
 }
 
 
 @-webkit-keyframes slide-in-bottom {
     0% {
-        opacity: 0;
+        /* test! */
+        opacity: 0.6;
         -webkit-transform: translateY(125px);
         transform: translateY(125px);
     }
@@ -38,7 +38,7 @@
 
 @keyframes slide-in-bottom {
     0% {
-        opacity: 0;
+        opacity: 0.6;
         -webkit-transform: translateY(125px);
         transform: translateY(125px);
     }
@@ -90,6 +90,34 @@
         transform-origin: 50% 50%;
         -webkit-filter: blur(0);
         filter: blur(0);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes slide-in-top {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-1000px);
+        transform: translateY(-1000px);
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-top {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-1000px);
+        transform: translateY(-1000px);
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
         opacity: 1;
     }
 }

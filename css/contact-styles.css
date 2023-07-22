@@ -1,0 +1,165 @@
+/* TODO: responsive stuff */
+
+section#contact {
+    display: flex;
+    flex-direction: column;
+    min-height: 50vh;
+    justify-content: flex-end;
+    align-items: center;
+    padding-top: 5vh;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: 2px solid #756D54;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    /* border-left-color: #3d3b3055;
+    border-right-color: #3d3b3055; */
+    border-bottom: none;
+    background-color: #756d5405;
+}
+
+::placeholder {
+    color: #89898999;
+}
+
+.contact-header {
+    /* border-bottom: 2px solid #3d3b3055; */
+    border-bottom: 2px solid #756D54;
+}
+
+.split-submit, .split-input {
+    display: flex;
+    flex-direction: row;
+}
+
+input[type="text"], input[type="email"], textarea {
+    font-size: 22px;
+    padding: 20px;
+    border: none;
+    color: #898989cc;
+}
+
+textarea {
+    /* border-bottom: 2px solid #a3a3a3; */
+    border-bottom: 2px solid #3d3b3055;
+    background: transparent;
+}
+
+.split-right-border {
+    border-right: 2px solid #898989;
+}
+
+input[type="text"], input[type="email"] {
+    background-color: transparent;
+    /* border-bottom: 1px solid #d3d3d3; */
+
+}
+
+input:focus, textarea:focus {
+    outline: none;
+}
+
+input:focus::placeholder, textarea:focus::placeholder {
+    color: transparent;
+}
+
+input[type="button"] {
+    width: 20%;
+    height: 10vh;
+    background-color: transparent;
+    border-style: none;
+    text-align: center;
+    color: #3d3b30;
+    font-size: 22px;
+    /* TODO */
+    transition: all 0.2s linear 0s;
+}
+
+input[type="button"]:hover {
+    background-color: #756d5420;
+}
+
+
+input.bottom {
+    /* border-bottom: 1px solid #d3d3d3; */
+    border-bottom: 2px solid #3d3b3055;
+    background-color: transparent;
+}
+
+input.split-right-border {
+    /* border-right: 3px dashed #070600; */
+    border-right: 3px dashed #3d3b30cc;
+}
+
+
+.contact-header {
+    position: relative;
+    display: flex;
+    padding: 20px 0px;
+    height: 10vh;
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.contact-header span {
+    width: 100%;
+    text-align: left;
+    font-size: 22px;
+    margin: auto 20px;
+    padding: 20px;
+    border: 3px solid #3d3b30;
+    border-right-style: dashed;
+    border-left-style: dashed;
+    /* see :root @ main-styles.css */
+    color: var(--color-lightgray);
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+    border-top-color: #756D54;
+    border-bottom-color: #756D54;
+    /* test colors (random): #454ADE #FF9F1C #5FBB97 (grey): #3D3B30 */
+}
+
+div.split-text input {
+    width: 50%;
+}
+
+div.split-submit input {
+    width: 35%;
+}
+
+div.split-submit input[type="button"] {
+    width: 30%;
+    padding: 0;
+}
+
+.form-height-input {
+    height: 6vh;
+}
+
+.form-height-textarea {
+    height: 20vh;
+    resize: none;
+}
+
+/* move this !!! */
+section {
+    max-width: 90vw;
+    border-left: 3px solid #3d3b3055;
+    border-right: 3px solid #3d3b3055;
+}
+
+/* move this !!! */
+footer {
+    background-color: #756d5422;
+    width: 90%;
+    margin: auto auto;
+    border-left: 3px solid #3d3b3055;
+    border-top: 3px solid #3d3b3055;
+    border-right: 3px solid #3d3b3055;
+    height: 6vh;
+}

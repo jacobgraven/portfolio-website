@@ -1,3 +1,8 @@
 # Old Code / WIP Stuff
 old/
 test/
+wip/
+
+#css/tmp/
+js/tmp/
+.prettierrc
