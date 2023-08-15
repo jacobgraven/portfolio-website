@@ -1,17 +1,18 @@
-// Page Refresh Events (scroll to top)
+// Page Refresh Event (scroll to top)
 window.onbeforeunload = function () {
-    document.getElementById("landing-img").remove();
+    document.getElementById("landing-cat").remove();
     document.getElementById("landing-header").remove();
     document.getElementById("landing-text").remove();
-
     window.scrollTo(0, 0);
 };
 
-// Content (DOM) Load Events
+// DOM Load Events
 document.addEventListener("DOMContentLoaded", () => {
     // Link smooth scrolling
     const links = document.querySelectorAll("nav a");
-    const scrollMargin = 15; // scroll Xvh above the clicked section
+    //const scrollMargin = 15; // scroll Xvh above the clicked section
+    // const scrollMargin = 5;
+    const scrollMargin = 0;
     links.forEach((link) => {
         link.addEventListener("click", (e) => {
             e.preventDefault();
@@ -30,6 +31,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // Page Load Events
-window.addEventListener("onload", () => {
-    // ...
-});
+// window.addEventListener("onload", () => {
+//     // ...
+// });

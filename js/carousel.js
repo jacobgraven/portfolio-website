@@ -1,70 +1,60 @@
-document.addEventListener("DOMContentLoaded", function () {
-    // const carouselContainer = document.querySelector(".carousel-container");
-    // const contentBoxes = Array.from(document.querySelectorAll(".content-box"));
-    const carouselSlides = Array.from(
-        document.querySelectorAll(".carousel-slide")
-    );
-    const prevArrow = document.querySelector(".arrow.prev");
-    const nextArrow = document.querySelector(".arrow.next");
-    let currentSlide = 0;
-    let slideInterval;
+document.addEventListener("DOMContentLoaded", () => {
+    const slidesContainer = document.getElementById("slides-container");
+    const slide = document.getElementById("slides-container").querySelector(".slide");
+    const prevButton = document.getElementById("slide-arrow-prev");
+    const nextButton = document.getElementById("slide-arrow-next");
 
-    function goToSlide(slideIndex) {
-        carouselSlides.forEach((slide) =>
-            slide.classList.remove("active", "prev", "next")
-        );
-        carouselSlides[slideIndex].classList.add("active");
-        carouselSlides[
-            (slideIndex - 1 + carouselSlides.length) % carouselSlides.length
-        ].classList.add("prev");
-        carouselSlides[(slideIndex + 1) % carouselSlides.length].classList.add(
-            "next"
-        );
-        currentSlide = slideIndex;
-    }
+    let currSlide = 1;
+    // let tmp = document.getElementById("")
+    const maxSlide = document.getElementById("slides-container").children.length;
 
-    function showNextSlide() {
-        goToSlide((currentSlide + 1) % carouselSlides.length);
-    }
 
-    function showPreviousSlide() {
-        goToSlide(
-            (currentSlide - 1 + carouselSlides.length) % carouselSlides.length
-        );
-    }
 
-    function startSlideInterval() {
-        slideInterval = setInterval(showNextSlide, 7500); // Auto-scroll
-    }
+    nextButton.addEventListener("click", (e) => {
+        e.preventDefault();
+        const slideWidth = slide.clientWidth;
 
-    nextArrow.addEventListener("click", showNextSlide);
-    prevArrow.addEventListener("click", showPreviousSlide);
-    startSlideInterval();
+        if(prevButton.classList.contains("arrow-disabled") && currSlide == 1) {
+            prevButton.classList.remove("arrow-disabled");
+        }
 
-    // TODO: fix hover functions (hover should be stopping autoscroll but only while hovered)
+        if (slidesContainer.scrollLeft + slidesContainer.offsetWidth < slidesContainer.scrollWidth) {
+            slidesContainer.scrollLeft += slideWidth;
+            currSlide++;
+        } else {
+            // console.log("test");
+            // nextButton.classList.add("next-disabled");
+            // slidesContainer.scrollTo(0, 0);
+            // animate(nextButton); // nextButton.classList.toggle(".edge-anim");            
+        }
 
-    // function stopSlideInterval() {
-    //   clearInterval(slideInterval);
-    // }
+        if(currSlide == maxSlide) {
+            nextButton.classList.add("arrow-disabled");
+        }
 
-    // function handleContentBoxHover() {
-    //   if (slideInterval) {
-    //     this.style.borderColor = "red";
+    });
 
-    //     stopSlideInterval();
-    //   }
-    //   this.style.borderColor = "red";
-    // }
+    prevButton.addEventListener("click", (e) => {
+        e.preventDefault();
+        const slideWidth = slide.clientWidth;
 
-    // function handleContentBoxLeave() {
-    //   if (!slideInterval) {
-    //     startSlideInterval();
-    //   }
-    //   this.style.borderColor = "";
-    // }
+        if(nextButton.classList.contains("arrow-disabled") && currSlide == maxSlide) {
+            nextButton.classList.remove("arrow-disabled");
+        }
+        if (slidesContainer.scrollLeft > 0) {
+            // currSlide--;
+            // console.log(currSlide);
+            slidesContainer.scrollLeft -= slideWidth;
+            currSlide--;
+        } else {
+            // prevButton.classList.add("arrow-disabled");
+            // console.log("test: prev max")
+            // slidesContainer.scrollTo(slidesContainer.scrollWidth, 0);
+            // slidesContainer.scrollTo(slidesContainer.scrollWidth, 0);
+        }
 
-    // contentBoxes.forEach(contentBox => {
-    //   contentBox.addEventListener("mouseenter", handleContentBoxHover);
-    //   contentBox.addEventListener("mouseleave", handleContentBoxLeave);
-    // });
+        if(currSlide == 1) {
+            prevButton.classList.add("arrow-disabled");
+        }
+    });
 });
