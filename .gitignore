@@ -1,13 +1,12 @@
 # old / outdated content
-/outdated
+outdated/
+assets/images/test-images/
 
 # wip css/js content (unimplemented)
 css/tmp/
 js/tmp/
 
-assets/images/test-images/
-
-# other (Config and Tessting Files)
+# other (Config and Tessting Files) # test-code/
 test-content.html
 test-styles.css
 test-script.js

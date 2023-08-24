@@ -1,36 +1,35 @@
-// Page Refresh Event (scroll to top)
+// Page Refresh //
 window.onbeforeunload = function () {
-    document.getElementById("landing-cat").remove();
-    document.getElementById("landing-header").remove();
-    document.getElementById("landing-text").remove();
+    // preemptively remove these elements to prevent them from flashing on screen
+    document.getElementById("landingSVG").remove();
+    document.getElementById("landingHeader").remove();
+    document.getElementById("landingText").remove();
     window.scrollTo(0, 0);
 };
 
-// DOM Load Events
+// Section Scroll (#scrollNav) //
 document.addEventListener("DOMContentLoaded", () => {
-    // Link smooth scrolling
-    const links = document.querySelectorAll("nav a");
-    //const scrollMargin = 15; // scroll Xvh above the clicked section
-    // const scrollMargin = 5;
+    // moves the page above the selected section by (scrollMargin)vh
     const scrollMargin = 0;
-    links.forEach((link) => {
+    const sectionLinks = document.querySelectorAll("nav a");
+    sectionLinks.forEach((link) => {
         link.addEventListener("click", (e) => {
             e.preventDefault();
 
             const href = link.getAttribute("href");
             const targetSection = document.querySelector(href);
-
             window.scrollTo({
-                top:
-                    targetSection.offsetTop -
-                    (scrollMargin * window.innerHeight) / 100, // - 5 * window.innerHeight / 100  ==> 5vh above section
-                behavior: "smooth",
+                top: targetSection.offsetTop - (scrollMargin * window.innerHeight) / 100,
+                behavior: "smooth"
             });
         });
     });
 });
 
-// Page Load Events
-// window.addEventListener("onload", () => {
-//     // ...
-// });
+
+// Prevent Scroll (for animations) //
+document.addEventListener("DOMContentLoaded", () => {
+    setTimeout(function() {
+        document.body.style.overflowY = 'visible';
+    }, 4250);
+});
