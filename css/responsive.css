@@ -1,143 +1,142 @@
-#svgContainer {
-  width: 75vw;
-  height: 50vh;
-  /* max-width: 75vw; */
-  /* max-height: 50vh; */
-}
-
-#svgContainer svg {
-  width: 100%;
-  height: 100%;
-  max-width: 100%;
-  max-height: 100%;
-}
-
 /** Experience Timeline (Reformatted for smaller screens) **/
 @media screen and (max-width: 768px) {
-    #experienceTimeline:before {
-        left: 8px;
-        width: 2px;
-    }
+  #experienceTimeline:before {
+    left: 8px;
+    width: 2px;
+  }
 
-    #experienceTimeline {
-      padding: 2.5% 0;
-    }
-
-    .timeline-entry {
-        width: 100%;
-        margin-bottom: 30px;
-    }
-
-    .timeline-content h3,
-    .timeline-content h4 {
-      font-size: 1.5rem;
-    }
-
-    .timeline-content p {
-      font-size: 1rem;
-    }
-
-    .timeline-marker {
-      font-size: 1.25rem;
-    }
-
-    .timeline-entry-right {
-        float: none;
-    }
-
-    .timeline-entry-left {
-        float: none;
-        direction: ltr;
-        text-align: left;
-    }
-}
-
-
-/** Mobile Devices **/
-/* @media screen and (max-width: 480px) {
-  #linkNav {
+  #experienceTimeline {
+    padding: 2.5% 0;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
   }
 
-  #svgContainer {
-    height: 25vh;
-    width: 95vw;
-  }
-
-  #scrollNav {
-    margin: 0 5vw;
-    margin-left: 0;
+  .timeline-entry {
     width: 100%;
-    justify-content: space-between;
-    flex-direction: column;
-    letter-spacing: 1.5px;
+    /* margin-bottom: 30px; */
+    margin-bottom: 5%;
   }
 
-  header {
-    height: 20vh;
-    margin-top: 4vh;
-
+  .timeline-entry-left .timeline-content {
+    border-right: none;
+    border-left: 2px solid var(--color-lightgray);
   }
 
-  #scrollNav a {
-    font-size: 1rem;
+  .timeline-entry-left .timeline-marker {
+    padding-right: 2.5%;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .timeline-entry-left .timeline-content {
+    padding-left: 2.5%;
+    padding-right: 0;
+  }
+
+  .timeline-entry-left {
+    padding-left: 2.5%;
+  }
+
+  .timeline-content h3,
+  .timeline-content h4 {
+    /* font-size: 1.5rem; */
+    /* font-size: 24px; */
+    font-size: calc(0.0625rem + ((1vw - 0.01px) * 2.9987));
+  }
+
+  .timeline-content p {
+    /* font-size: 1rem; */
+    /* font-size: 16px; */
+    font-size: calc(0.0625rem + ((1vw - 0.01px) * 1.9557));
+  }
+
+  .timeline-marker {
+    /* font-size: 1.25rem; */
+    /* font-size: 20px; */
+    font-size: calc(0.0625rem + ((1vw - 0.01px) * 2.4772));
+    text-align: left !important;
+  }
+
+  .timeline-entry-right {
+    float: none;
+  }
+
+  .timeline-entry-left {
+    float: none;
+    direction: ltr;
     text-align: left;
-    margin: -0.5rem;
-    padding: 0.5rem;
   }
-} */
+}
 
 /* Mobile (up to 480px) */
 @media screen and (max-width: 480px) {
-  header {
-    height: 20vh;
-    margin-top: 4vh; 
+  header nav {
+    height: 20rem;
+    margin: 5% 0;
+    justify-content: space-evenly;
   }
 
-  #linkNav {
-    justify-content: center;
+  #linkNav,
+  #scrollNav {
+    height: 100%;
+    width: auto;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 0;
   }
 
   #linkNav a,
   #linkNav img {
-    width: 50px;
-    height: 50px;
-  }
-
-  #scrollNav {
-    margin: 0 5vw;
-    margin-left: 0;
-    width: 100%;
-    justify-content: space-between;
-    flex-direction: column;
-    letter-spacing: 1.5px;
+    width: 5rem;
+    height: 5rem;
   }
 
   #scrollNav a {
-    font-size: 1rem;
-    text-align: left;
     margin: -0.5rem;
     padding: 0.5rem;
+    font-size: 1.75rem;
+    letter-spacing: 0.25rem;
+    text-align: center;
   }
 
-  #svgContainer {
-    height: 25vh;
-    max-height: 25vh;
-    width: 95vw;
-    /* max-width: 95vw; */
+  #welcomeSection {
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 75vh;
+    padding: 0 5%;
+  }
+
+  #welcomeSection .right-section {
+    order: 1;
+    width: 100%;
+    /* height: auto; */
+    text-align: center;
+  }
+
+  #welcomeSection .left-section {
+    order: 2;
+    width: 100%;
+    /* height: auto; */
+    /* justify-content: flex-start; */
+  }
+
+  .placeholder-picture {
+    width: 15rem;
+    height: 15rem;
+    margin: 0 auto;
+    font-size: 1rem;
   }
 
   #welcomeSection h1 {
-    font-size: calc(40px + (50 - 40) * ((100vw - 380px) / (480 - 380)));
-    margin-bottom: 5vh;
-    /* font-size: calc(2.25rem + 2vw); */
-    /* margin: 5vh 0; */
+    font-size: 2rem;
+    text-align: center;
   }
 
   #welcomeSection p {
-    font-size: calc(18px + (24 - 18) * ((100vw - 380px) / (480 - 380)));
-    padding: 0 20px;
-    /* font-size: 1.5rem; */
+    font-size: 1rem;
+    line-height: 25px;
+    text-align: center
   }
 
   #educationInfo p {
@@ -154,29 +153,56 @@
 
 /* Small Tablets (481px to 768px) */
 @media screen and (min-width: 481px) and (max-width: 768px) {
-  #educationInfo img {
-    width: 75%;
-  }
-  
-  #educationInfo p {
-    font-size: calc(30px + (40 - 30) * ((100vw - 480px) / (768 - 480)));
-    bottom: 20%;
+  header nav {
     width: 100%;
+    margin: 5% 0;
+    justify-content: space-between;
   }
 
-  #scrollNav {
-    gap: calc(5vw - 0.75rem);
+  #linkNav a,
+  #linkNav img {
+    width: 4rem;
+    height: 4rem;
   }
 
   #scrollNav a {
-    font-size: 1.15rem;
-    padding: calc(5vw - 1.25rem);
-    margin: calc(1.25rem - 5vw);
+    margin: -1rem;
+    padding: 1rem;
+    font-size: 0.5rem;
+    letter-spacing: 0rem;
+    text-align: center;
+  }
 
-    margin-top: -1rem;
+  #linkNav {
+    /* width: 100%; */
+    /* margin: 0;   */
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  #scrollNav {
+    justify-content: center;
+    /* width: 100%; */
+    /* justify-content: center; */
+    /* gap: calc(5vw - 0.75rem); */
+    /* gap: calc(5vw - 12px); */
+    /* margin: 0; */
+  }
+
+  #scrollNav a {
+    /* font-size: 1.15rem; */
+    /* padding: calc(5vw - 1.25rem); */
+    /* margin: calc(1.25rem - 5vw); */
+    /* font-size: 18.5px;
+    padding: calc(5vw - 20px);
+    margin: calc(20px - 5vw); */
+
+    /* margin: -16px 0;
+    padding: 16px 0; */
+    /* margin-top: -1rem;
     margin-bottom: -1rem;
     padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-bottom: 1rem; */
     /* padding: 0.5rem;
     margin: -0.5rem; */
   }
@@ -192,8 +218,7 @@
 
   #welcomeSection p {
     padding: 0 25px;
-    /* font-size: 1.25rem; */
-    font-size: 1.15rem;
+    font-size: 18.5px;
   }
 
   #linkNav a,
@@ -202,30 +227,45 @@
     height: 40px;
   }
 
-  #svgContainer {
-    max-height: 30vh;
-  }
+    /* #educationInfo img {
+    width: 75%;
+  } */
+  
+  /* #educationInfo p {
+    font-size: calc(30px + (40 - 30) * ((100vw - 480px) / (768 - 480)));
+    bottom: 20%;
+    width: 100%;
+  } */
 }
 
 /* Tablets and Small Laptops (769px to 1024px) */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   #scrollNav a {
-    font-size: 1.5rem;
+    /* font-size: 1.5rem; */
+    /* font-size: 24px; */
+    font-size: 1rem;
+    /* gap: calc(1rem + 4vw); */
+  }
+
+  #scrollNav {
+    /* gap: calc(1rem + 1vw); */
   }
 
   #linkNav a,
   #linkNav img {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
   }
 
   #welcomeSection h1 {
-    font-size: 4.5rem;
+    /* font-size: 4.5rem; */
+    font-size: 72px;
   }
 
   #welcomeSection p {
     padding: 0 50px;
-    font-size: 1.5rem;
+    /* font-size: 1.5rem; */
+    font-size: 24px;
   }
 
   #svgContainer {
@@ -251,52 +291,57 @@
 
 /* Laptops and Desktops (1025px to 1280px) */
 @media screen and (min-width: 1025px) and (max-width: 1280px) {
+  #scrollNav {
+    /* width: auto; */
+  }
+
+  #linkNav {
+    /* width: auto; */
+  }
+
+
   #linkNav a,
   #linkNav img {
-    width: 60px;
-    height: 60px;
+    width: 6rem;
+    height: 6rem;
   }
 
   #scrollNav a {
-    font-size: 1.75rem;
+    font-size: 2.8rem;
+    font-size: clamp(2.8rem, -0.26rem + 3.14vw, 3.6rem);
   }
 
   #welcomeSection h1 {
-    font-size: 5rem;
+    /* font-size: 5rem; */
+    font-size: 80px;
   }
 
   #welcomeSection p {
-    font-size: 1.75rem;
+    font-size: 28px;
+    /* font-size: 1.75rem; */
   }
 }
 
-/* @media screen and (min-width: 1281px) {} */
 
-/*** Common Devices ***/
 
-/* iPhone X and Similar Devices (375px width) */
-/* @media screen and (width: 375px) {} */
+/* 
+xs, extra-small: 0px
+0rem;
+sm, small: 600px
+37.5rem
+md, medium: 900px
+56.25rem
+lg, large: 1200px
+75rem
+xl, extra-large: 1536px 
+96rem
+*/
 
-/* iPhone 6/7/8 (Standard Resolution, 375px width) */
-/* @media screen and (width: 375px) {} */
+/* Mobile - 360px */
+/* @media only screen and (min-width: 0rem) {} */
 
-/* iPhone Plus Series (414px width) */
-/* @media screen and (width: 414px) {} */
+/* Tablet - 768px */
+/* @media only screen and (min-width: 48rem) {} */
 
-/* Common Android Phones (360px width) */
-/* @media screen and (width: 360px) {} */
-
-/* iPad (768px width) */
-/* @media screen and (width: 768px) {} */
-
-/* Most Common Laptop (1366px width) */
-/* @media screen and (width: 1366px) {} */
-
-/* Large Desktop (1920px width) */
-/* @media screen and (width: 1920px) {} */
-
-/* 2K Monitors (2560px width) */
-/* @media screen and (width: 2560px) {} */
-
-/* 4K Monitors (3840px width) */
-/* @media screen and (width: 3840px) {} */
+/* Large Desktop 1300px */
+/* @media only screen and (min-width: 81.25rem) {} */

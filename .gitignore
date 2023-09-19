@@ -1,14 +1,9 @@
-# old / outdated content
-outdated/
-assets/images/test-images/
+# Config files
+.vscode
+.prettierrc
 
-# wip css/js content (unimplemented)
+# Notes and old code
+assets/images/tmp/
+outdated/
 css/tmp/
 js/tmp/
-
-# other (Config and Tessting Files) # test-code/
-test-content.html
-test-styles.css
-test-script.js
-.prettierrc
-.vscode

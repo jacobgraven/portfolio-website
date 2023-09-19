@@ -1,62 +1,55 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const slidesContainer = document.getElementById("slideContainer");
-    const slide = document.getElementById("slideContainer").querySelector(".slide");
+    const container = document.getElementById("slideContainer");
     const prevButton = document.getElementById("slideArrowPrev");
     const nextButton = document.getElementById("slideArrowNext");
-    const maxSlide = document.getElementById("slideContainer").children.length;
-    // const slideWidth = slide.clientWidth;
+    const slideEle = container.querySelector(".slide");
+    const maxSlide = container.children.length;
     let currSlide = 1;
     let isEnabled = true;
 
     nextButton.addEventListener("click", (e) => {
         e.preventDefault();
-        const slideWidth = slide.clientWidth;
+        const slideWidth = slideEle.clientWidth;
 
         if (isEnabled) {
             isEnabled = false;
 
-            if (prevButton.classList.contains("arrow-disabled") && currSlide == 1) {
-                prevButton.classList.remove("arrow-disabled");
-            }
-
-            if (slidesContainer.scrollLeft + slidesContainer.offsetWidth < slidesContainer.scrollWidth) {
-                slidesContainer.scrollLeft += slideWidth;
-                currSlide++;
-            }
-
             if (currSlide == maxSlide) {
-                nextButton.classList.add("arrow-disabled");
+                container.scrollLeft = 0;
+                currSlide = 1;
+            } else {
+                container.scrollLeft += slideWidth;
+                currSlide++;
             }
 
             setTimeout(() => {
                 isEnabled = true;
-            }, 1000);
+            }, 750);
         }
     });
 
     prevButton.addEventListener("click", (e) => {
         e.preventDefault();
-        const slideWidth = slide.clientWidth;
+        const slideWidth = slideEle.clientWidth;
 
-        if(isEnabled) {
+        if (isEnabled) {
             isEnabled = false;
 
-            if (nextButton.classList.contains("arrow-disabled") && currSlide == maxSlide) {
-                nextButton.classList.remove("arrow-disabled");
-            }
-
-            if (slidesContainer.scrollLeft > 0) {
-                slidesContainer.scrollLeft -= slideWidth;
-                currSlide--;
-            }
-
             if (currSlide == 1) {
-                prevButton.classList.add("arrow-disabled");
+                container.scrollLeft = slideWidth * maxSlide;
+                currSlide = maxSlide;
+            } else {
+                container.scrollLeft -= slideWidth;
+                currSlide--;
             }
 
             setTimeout(() => {
                 isEnabled = true;
-            }, 1000);
+            }, 750);
         }
     });
+
+    window.onresize = function() {
+        document.getElementById("slideContainer").scrollLeft = 0;
+    }
 });
