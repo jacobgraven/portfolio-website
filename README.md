@@ -1,17 +1,8 @@
-# Portfolio Website Repo | Jacob Graven
+# Portfolio Site Repo | Jacob Graven
 
-### To see the live website, visit [jgraven.com](https://jgraven.com)
+## To see the live website, visit [jgraven.com](https://jgraven.com). 
 
-### Design & Features: 
-
-[comment]: <> (+ Vanilla HTML, CSS, and JS)
-[comment]: <> (+ Responsive design (site layout adjusted for most common devices)
-[comment]: <> (+ Designed for most popular browsers[^1])
-
-
-[comment]: <> (WIP features/designing)
-[comment]: <> (Readable and semantic code)
-[comment]: <> (...)
+Note: because of poor planning early on, the site is not fully responsive and it does not adapt well to mobile devices. I plan on redesigning the current content so that it focuses on mobile layouts first.
 
 
 
