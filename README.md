@@ -2,7 +2,7 @@
 
 ## To see the live website, visit [jgraven.com](https://jgraven.com). 
 
-Note: because of poor planning early on, the site is not fully responsive and it does not adapt well to mobile devices. I plan on redesigning the current content so that it focuses on mobile layouts first.
+Because of poor planning early on, the site is not fully responsive and it does not adapt well to mobile devices. I plan on redesigning the current content so that it focuses on mobile screens first rather than desktop computers (or larger screens).
 
 
 
