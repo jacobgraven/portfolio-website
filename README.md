@@ -4,9 +4,9 @@
 
 ### Design & Features: 
 
-+ Vanilla HTML, CSS, and JS
-+ Responsive design (site layout adjusted for most common devices)
-+ Designed for most popular browsers[^1]
+[comment]: <> (+ Vanilla HTML, CSS, and JS)
+[comment]: <> (+ Responsive design (site layout adjusted for most common devices)
+[comment]: <> (+ Designed for most popular browsers[^1])
 
 
 [comment]: <> (WIP features/designing)
@@ -15,7 +15,7 @@
 
 ### URL & Additional Information
 
-The website is deployed at [jgraven.com](https://jgraven.com); it is hosted by Namecheap[^2]. Icons and images were sourced with a few third-party resources.[^3] Additional attributions are made in some source files.
+[comment]: <> (The website is deployed at [jgraven.com](https://jgraven.com); it is hosted by Namecheap[^2]. Icons and images were sourced from a few third-party resources.[^3] Additional attributions are made in some source files.)
 
 [^1]: The site has truly only been tested on Chrome (so far). Some testing has been done on Firefox and Safari, but not much. However, there shouldn't be too many concerns involving untested browsers because the code is pretty lightweight.
 
